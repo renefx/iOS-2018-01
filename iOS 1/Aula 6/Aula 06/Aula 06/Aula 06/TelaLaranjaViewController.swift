@@ -1,0 +1,20 @@
+//
+//  TelaLaranjaViewController.swift
+//  Aula 06
+//
+//  Created by Renê Xavier on 12/08/18.
+//  Copyright © 2018 com.iesb. All rights reserved.
+//
+
+import UIKit
+
+class TelaLaranjaViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    @IBAction func voltarTelaInicial(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+}

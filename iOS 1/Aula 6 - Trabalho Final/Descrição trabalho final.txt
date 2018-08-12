@@ -1,0 +1,49 @@
+Antes de ler essa descrição, abra a imagem 'Trabalho Final.png' e acompanhe a descrição.
+
+Como material complementar, o arquivo 'Imagens Trabalho Final.zip' contém todas as imagens do projeto. Há uma pequena mudança nos arquivos que foram entregues na aula. Inclua essas imagens no projeto e utilize-as.
+
+O projeto final é um projeto em Swift podendo ser baseado em projetos já criados em sala e disponíveis no blackboard. Todo esse exercício é executado pelo Storyboad (com a exceção da segue programática). A entrega deve ser do projeto .zip ou .rar e dentro dele o arquivo com extensão  '.xcodeproj' assim como a pasta com os arquivos fonte. (Como nas imagens Comprimir 1 e Comprimir 2 em anexo)
+
+Para o trabalho final:
+
+A tela Minhas Listas, com um grande botão + vermelho, e a tela de perfil, com uma rosto de uma mulher são UIViewControllers soltas. Não existem segues nem direcionando à elas nem a partir delas.
+
+Nas telas com segue:
+
+A primeira ViewController deve ser uma Tab Bar Controller.
+
+O nome dos ítens da Tab Bar Controller devem ser:
+
+Listas,Lojas, Perfil - Nessa ordem
+
+Dentro Tab Bar Controller devem estar três Navigation Controllers. 
+
+Cada uma dessas Navigation Controllers tem como root view controller uma UIViewController.
+
+As ViewControllers dentro da Navigation controller devem ter títulos (como indicado na imagem do trabalho):
+
+Minhas Listas, Lista Videogame, Lojas, Ricardo Eletro e Perfil
+
+Devem ser feitas (além das segues da Tab Bar e da Navigation Controller) as seguintes segues:
+
+-Da tela Minhas listas para a tela Lista Videogame - Segue do tipo Show
+
+-Da tela Lojas para a tela Ricardo Eletro - Segue do tipo Show
+
+-Da tela Perfil para a tela Cadastro - Segue do tipo Present Modally
+
+A tela Minhas Listas deve ter um botão em cima de cada um dos dois ítens vermelhos. Esses botões que executarão a segue para a tela Lista Videogame 
+
+A tela Lojas deve ter um botão em cima de cada um dos três ítens de lojas. Esses botões que executarão a segue para a tela Ricardo Eletro
+
+A tela Perfil deve ter um botão Cadastre-se que executa a segue Present Modally para a tela de cadastro. 
+
+A tela do Cadastre-se tem um botão 'X' que deve executar o retorno para a tela anterior de forma programática.
+
+Algumas imagens estão redondas. Isso não é possível obter no Xcode pelo método explicado na aula, como já explicado. Quero que as imagens tenham um borderRadius, ainda que não fiquem perfeitamente redondas. O mesmo vale para os botões.
+
+As imagens do carrinho, da pessoa da tela de Cadastre-se e dos celulares da tela do Ricardo Eletro devem sempre ser quadradas (aspect ratio).
+
+Na tela de Perfil e Cadastre-se os campos a serem digitados devem ser TextFields o texto que é visto na imagem do trabalho deve ser o Placeholder dele e a fonte deve ser maior do que a que já vem.
+
+Todas as telas devem estar com o auto layout para a tela na posição vertical (em pé), não é necessário ajustar para a horizontal.
