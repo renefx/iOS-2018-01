@@ -9,7 +9,8 @@
 import UIKit
 
 class TelaVerdeViewController: UIViewController {
-
+    var texto: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,6 +26,6 @@ class TelaVerdeViewController: UIViewController {
     }
     
     @IBAction func voltarParaTelaVerde(_ sender: UIStoryboardSegue)  {
-        
+        print("unwind voltou")
     }
 }

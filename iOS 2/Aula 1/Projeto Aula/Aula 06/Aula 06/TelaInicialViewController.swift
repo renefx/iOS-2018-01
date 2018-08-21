@@ -9,7 +9,9 @@
 import UIKit
 
 class TelaInicialViewController: UIViewController {
+    
 
+    @IBOutlet weak var textoUsuario: UITextField!
     @IBOutlet weak var botaoStoryboardCodigo: UIButton!
     @IBOutlet var botoesDaTela: [UIButton]!
     
@@ -55,4 +57,10 @@ class TelaInicialViewController: UIViewController {
         self.navigationController?.pushViewController(telaVerdeViewController, animated: true)
     }
     
+    @IBAction func escreverTextoDigitado(_ sender: Any) {
+        print(textoUsuario.text ?? "nil")
+    }
+    
+    
 }
+

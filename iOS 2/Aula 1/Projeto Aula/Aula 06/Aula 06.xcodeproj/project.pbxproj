@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5A9E0932120D0B100213649 /* PrimeiraTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9E0922120D0B100213649 /* PrimeiraTabViewController.swift */; };
+		F5A9E0952120D0BB00213649 /* SegundaTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9E0942120D0BB00213649 /* SegundaTabViewController.swift */; };
 		F5B55605211FF17F0087C0F4 /* TelaLaranjaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B55604211FF17F0087C0F4 /* TelaLaranjaViewController.swift */; };
 		F5D3AD672113BB9A00CE3664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AD662113BB9A00CE3664 /* AppDelegate.swift */; };
 		F5D3AD692113BB9A00CE3664 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3AD682113BB9A00CE3664 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5A9E0922120D0B100213649 /* PrimeiraTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeiraTabViewController.swift; sourceTree = "<group>"; };
+		F5A9E0942120D0BB00213649 /* SegundaTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegundaTabViewController.swift; sourceTree = "<group>"; };
 		F5B55604211FF17F0087C0F4 /* TelaLaranjaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaLaranjaViewController.swift; sourceTree = "<group>"; };
 		F5D3AD632113BB9A00CE3664 /* Aula 06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aula 06.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D3AD662113BB9A00CE3664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				F5D3AD682113BB9A00CE3664 /* ViewController.swift */,
 				F5D3AD6A2113BB9A00CE3664 /* Main.storyboard */,
 				F5B55604211FF17F0087C0F4 /* TelaLaranjaViewController.swift */,
+				F5A9E0922120D0B100213649 /* PrimeiraTabViewController.swift */,
+				F5A9E0942120D0BB00213649 /* SegundaTabViewController.swift */,
 				F5FCA315211CFB78002AF58B /* TelaVerdeViewController.swift */,
 				F5D3AD782113D99A00CE3664 /* TelaInicialViewController.swift */,
 				F5D3AD6D2113BB9B00CE3664 /* Assets.xcassets */,
@@ -147,7 +153,9 @@
 				F5D3AD692113BB9A00CE3664 /* ViewController.swift in Sources */,
 				F5D3AD792113D99A00CE3664 /* TelaInicialViewController.swift in Sources */,
 				F5D3AD672113BB9A00CE3664 /* AppDelegate.swift in Sources */,
+				F5A9E0932120D0B100213649 /* PrimeiraTabViewController.swift in Sources */,
 				F5B55605211FF17F0087C0F4 /* TelaLaranjaViewController.swift in Sources */,
+				F5A9E0952120D0BB00213649 /* SegundaTabViewController.swift in Sources */,
 				F5FCA316211CFB78002AF58B /* TelaVerdeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

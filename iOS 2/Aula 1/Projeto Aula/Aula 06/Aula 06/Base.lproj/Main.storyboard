@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HyJ-a8-9F2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HyJ-a8-9F2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,6 +61,31 @@
                                     <action selector="buttonNavControllerPressed:" destination="zLA-iF-VqF" eventType="touchUpInside" id="vDp-3g-CXD"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKg-SK-oXR">
+                                <rect key="frame" x="49" y="426" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8D-fF-bJ7">
+                                <rect key="frame" x="48" y="464" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.94901960780000005" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button Imprime texto">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="escreverTextoDigitado:" destination="zLA-iF-VqF" eventType="touchUpInside" id="HmR-el-Hqf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFw-eC-KOp">
+                                <rect key="frame" x="74" y="561" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.3754627109" green="0.72476530080000001" blue="0.98674911259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="iTM-Zx-crc"/>
@@ -66,12 +93,13 @@
                     <navigationItem key="navigationItem" id="fbw-mS-hDk"/>
                     <connections>
                         <outlet property="botaoStoryboardCodigo" destination="gie-ik-lcH" id="pNM-uG-lpR"/>
+                        <outlet property="textoUsuario" destination="dKg-SK-oXR" id="zbe-Sg-Bua"/>
                         <outletCollection property="botoesDaTela" destination="1ny-VX-jlB" collectionClass="NSMutableArray" id="UOb-NI-RY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ucb-hh-bk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="791"/>
+            <point key="canvasLocation" x="136.80000000000001" y="790.25487256371821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="04C-IA-Pia">
@@ -88,6 +116,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1f-pw-Wj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-588" y="797"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="WjI-e1-4R6">
+            <objects>
+                <viewController id="HVr-6A-41z" customClass="SegundaTabViewController" customModule="Aula_06" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xgq-Hh-WI3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6Z-7T-bkG">
+                                <rect key="frame" x="134" y="133" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="HVr-6A-41z" eventType="touchUpInside" id="Enc-md-Rxe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HMd-5z-PLS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="80j-eu-CY8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOH-m7-1cT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="2131"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="aHs-xp-3Xr">
+            <objects>
+                <viewController id="Ruz-QA-MTc" customClass="PrimeiraTabViewController" customModule="Aula_06" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5P-cp-e60">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="K5B-hc-hy4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="aBh-pr-5un"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLZ-xs-Wgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="1468"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jQl-Fh-jSD">
+            <objects>
+                <tabBarController id="6tN-MP-kk1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rZ7-ik-8GR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ruz-QA-MTc" kind="relationship" relationship="viewControllers" id="I9t-i8-ehv"/>
+                        <segue destination="HVr-6A-41z" kind="relationship" relationship="viewControllers" id="ppW-vN-JVm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBb-9e-8WP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1227" y="1799"/>
         </scene>
         <!--Tela Verde View Controller-->
         <scene sceneID="DZO-ZF-DV6">
