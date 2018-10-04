@@ -1,0 +1,132 @@
+Para a entrega, o projeto deve ser comprimido (.zip ou .rar) e dentro dele todas as pastas do nosso projeto incluindo os pods (como nas imagens Comprimir 1 e Comprimir 2 em anexo).
+O trabalho pode ser feito em grupos de até três pessoas.
+
+Caso me envie por email, um email basta. Deve haver no corpo do email a indicação do nome, matrícula e email dos integrantes do grupo. O assunto do email deve ser o seguinte: 
+[iOS 2 - 2018/1 Trabalho Final]
+
+Para o envio pelo blackboard, envie dentro do arquivo comprimido um arquivo﻿ alunos.txt com o nome e matricula dos integrantes.﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+
+O projeto final é um projeto em Swift podendo ser baseado em projetos já criados em sala e disponíveis no blackboard. O tabalho consiste em:
+
+-Alterar as telas que não utilizam uma TableView/TableViewController para passarem a usar
+
+-Atualizar os dados da tela buscando no banco de dados Realm - (obrigatório o uso do Realm)
+
+O material complementar desse projeto encontra-se junto desse ítem do blackboard/pasta do git. Ele é um projeto já com o Realm e umas classes da camada modelo. Ele se encontra incompleto propositalmente. Iremos corrigir em sala. A falta dessa correção acarretará em perda de pontos.
+
+A estrutura da camada modelo deve estar assim após as correções na classe Loja:
+
+Usuario { 
+    email: String - primary key,
+	foto: String,
+	nome: String,
+	senha: String,
+	telefone: String,
+	idade: Int,
+	listasFavoritos: [Favorito]
+	lojasServidor: [Lojas]
+}
+
+Favorito {
+	nome: String - primary key
+	listaLojas: [Loja]
+}
+
+LojasServidor { - contém todas as lojas do app (favoritas e não favoritas)
+	listaLojas: [Loja]
+}
+
+Loja {
+	nome: String - primary key
+	iconePequeno: String,
+	iconeGrande: String,
+	favorita: Bool,
+	vendeComputador: Bool,
+	vendeJogos: Bool,
+	produtos: [Produto]
+}
+
+Produto {
+	titulo: String - primary key
+	imagem: String,
+	descricao: String
+}
+
+Quanto as alterações mais visuais, elas são descritas abaixo. Agora lembrando que o App será avaliado na horizontal e vertical em diversos dispositivos. Se a célula da TableView foi criada corretamente seguindo o auto-layout, nada mais deverá ser feito para ela se ajustar ao virar a tela. 
+
+Dica 1: Lembrando também que para testar o visual em diversos dispositivos e orientações, podemos utilizar o Editor Assistente no modo preview - iOS 01 - Aula 05 - slides 26 a 30. 
+
+Dica 2: Para evitar o encolhimento do texto (evitar ele ficar com três pontinhos), podemos utilizar a propriedade Autoshrink da UILabel no storyboard mesmo - iOS 01 - Aula 05 - slide 67. 
+
+-Transformar a Cena "Minhas Listas" para uma TableViewController
+
+	- Criar dois tipos de célula respeitando o autolayout:
+
+		- Uma com o visual que já temos (Nome da loja quantidade de lojas). 
+
+		- Uma que tenha o visual da Cena "Crie aqui uma lista com lojas". Ela deve conter esse texto dito e a imagem "add-big". Essa célula só deve ser exibida quando não houverem listas favoritas.
+
+	- Criar uma controller que busque as listas de favoritos do banco de dados Realm e retorne para a camada View apenas o nome e a quantidade de lojas.
+
+	- Criar uma segue dessa célula para a Cena Lista Jogo. Essa segue deve passar para a próxima tela o nome da lista selecionada (já que o nome é a primary key)
+
+-Transformar a Cena "Lista Jogos" para uma TableViewController respeitando o autolayout:
+
+	 - Criar uma controller que busque (no Realm pelo Nome da lista) as lojas desse favorito e retorne para a camada View apenas:
+
+	 	- O nome (String)
+
+	 	- O nome da logo (String)
+
+	 	- Se tem ou não videogame (Bool)
+
+	 	- Se tem ou não computador (Bool).
+
+	 - A view deve exibir essas informações e deve sempre exibir o coração "liked"
+
+-Transformar a Cena "Ricardo Eletro" para uma TableViewController ou em uma ViewController com uma TableView respeitando o autolayout:
+
+	 - Para o caso da TableViewController a parte da logo, nome da loja, mapa e o texto "Todos Produtos/Serviços" ficam sendo o cabeçalho da TableView e os produtos são a célula da TableView - Os elementos do cabeçalho tem que ser ajustados no autolayout, porém não é necessário fazer tantas configurações na TableViewController
+
+	 - Para o caso da UIViewController com uma TableView, a TableView só começa depois de "Todos Produtos/Serviços" - Os elementos de cima não tem que ajustar ao autolayout, mas é necessário fazer aquelas configurações na UIViewController para que a TableView funcione 
+
+	 - Criar uma controller que busque (no Realm pelo nome da loja) as informações dessa loja e retorne para a camada View apenas:
+
+	 	- O nome (String)
+
+	 	- O nome da logo grande (String)
+
+	 	- Nome do produto de determinado index
+
+	 	- Nome da imagem do produto de determinado 
+	 	index
+	 	
+	 	- Descrição do produto de determinado index
+
+-Transformar a Cena "Login" para uma TableViewController respeitando o autolayout
+	
+	- Não precisa colocar a imagem atrás da tableView (por enquanto)
+	
+	- Criar uma Action para o botão entrar
+	
+	- Essa action chama a Controller enviando o texto que o usuário digitou no login e senha
+	
+	- A Controller faz um select do usário e senha no banco e retorna um true e false informando para a view se esse usuário existe ou não
+	
+	- Caso a Controller retorne true, programaticamente apresentar a tela de perfil passando o lgoin do usuário.
+
+- A Cena de Cadastro:
+
+	- A view deve chamar a Controller passando as String dos campos de cadastro
+
+	- Criar uma Controller com uma função que receba os parâmetros de cadastro, crie um objeto Usuario, salve-o no banco e retorne um boolean indicando se foi bem sucedido ou não - usar try catch do Realm
+
+		- A imagem do usuario deverá ser a “user-logo”
+
+	- Para o caso do retorno positivo da controller, programaticamente
+
+-Transformar a Cena "Perfil" para uma TableViewController respeitando o autolayout
+
+	- Não precisa colocar a imagem atrás da tableView (por enquanto)
+
+	- Criar uma controller para recuperar os dados do banco e retornar o: nome da imagem, nome, email, telefone quantas listas o usuário tem
