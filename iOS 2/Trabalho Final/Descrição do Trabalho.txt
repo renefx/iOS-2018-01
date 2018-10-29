@@ -123,7 +123,7 @@ Dica 2: Para evitar o encolhimento do texto (evitar ele ficar com três pontinho
 
 		- A imagem do usuario deverá ser a “user-logo”
 
-	- Para o caso do retorno positivo da controller, programaticamente
+	- Para o caso do retorno positivo da controller, direcione ﻿programaticamente ﻿o usuário para a tela de Perfil.﻿﻿﻿﻿﻿﻿
 
 -Transformar a Cena "Perfil" para uma TableViewController respeitando o autolayout
 
