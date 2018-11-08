@@ -1,0 +1,35 @@
+Para a entrega, o projeto deve ser comprimido (.zip ou .rar) e dentro dele todas as pastas do projeto incluindo os pods (como nas imagens Comprimir 1 e Comprimir 2 em anexo).
+O trabalho pode ser feito em grupos de até três pessoas.
+
+Caso me envie por email, um email basta. Deve haver no corpo do email a indicação do nome, matrícula e email dos integrantes do grupo. O assunto do email deve ser o seguinte: 
+[iOS 3 - 2018/1 Trabalho Final]
+
+Para o envio pelo blackboard, envie dentro do arquivo comprimido um arquivo﻿ alunos.txt com o nome e matricula dos integrantes.﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+
+Para iOS3 temos três opções de trabalho:
+
+- Apresentar um App publicado em sua loja pessoal da Apple (projetos de empresas não são válidos) - Nesse caso enviar seu nome e o link
+
+OU
+
+- Fazer uma requisição POST das seguintes: login ou cadastro do mockoon apresentado em sala. Para o caso do login, o parâmetro do header Authorization deve estar em base64.
+
+- A requisição dever seguir o padrão MVC ou alguma outra arquitetura
+
+- Deve haver uma tela com inputs para inserir valores a serem enviados (pode ser a tela de trabalhos anteriores)
+
+- Apresentar os valores de retorno, seja na mesma tela ou em outra.
+
+-Exibir e remover um indicador de loading (pode ser o aquele pod que inserimos no lojas ou outra solução)
+
+OU
+
+- Fazer uma requisição POST a uma API enviando parâmetros no body. Essa API pode ser uma das exibidas em sala ou qualquer outra.
+
+- A requisição dever seguir o padrão MVC ou alguma outra arquitetura
+
+- Deve haver uma tela com inputs para inserir valores a serem enviados
+
+- Apresentar os valores de retorno, seja na mesma tela ou em outra.
+
+-Exibir e remover um indicador de loading (pode ser o aquele pod que inserimos no lojas ou outra solução)
