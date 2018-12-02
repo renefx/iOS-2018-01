@@ -26,6 +26,15 @@ OU
 
 - Fazer uma requisição POST a uma API enviando parâmetros no body. Essa API pode ser uma das exibidas em sala ou qualquer outra.
 
+
+(Algumas API's apresentadas em sala﻿﻿﻿﻿)
+
+https://any-api.com/
+
+https://github.com/toddmotto/public-apis
+
+https://www.programmableweb.com/search/art
+
 - A requisição dever seguir o padrão MVC ou alguma outra arquitetura
 
 - Deve haver uma tela com inputs para inserir valores a serem enviados
